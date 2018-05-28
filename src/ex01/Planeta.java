@@ -1,16 +1,15 @@
 package ex01;
 
-public class Planeta {
+public abstract class Planeta {
 	
 	private String nome;
 	private String cor;
 	private int diâmetro;
-	private String sistema;
 	
-	public Planeta (String nome, String c, int d, String s) {
+	public Planeta (String nome, String c, int d) {
+		this.nome = nome;
 		cor = c;
 		diâmetro = d;
-		sistema = s;
 	}
 	
 	public String getCor() {
@@ -25,12 +24,7 @@ public class Planeta {
 	public void setDiâmetro(int diâmetro) {
 		this.diâmetro = diâmetro;
 	}
-	public String getSistema() {
-		return sistema;
-	}
-	public void setSistema(String sistema) {
-		this.sistema = sistema;
-	}
+
 
 	public String getNome() {
 		return nome;

@@ -3,17 +3,23 @@ package ex01;
 public class RegimePolítico {
 	private String nome;
 	private String capital;
-	private Planeta[] planetas = new Planeta[10];
+	private Sistema[] sistemas = new Sistema[10];
 	private String dataInstituição;
 	private String dataDissolução;
+
 	
 	public RegimePolítico(String nome, String capital, String dataInstituição, String dataDissolução) {
 		this.nome = nome;
 		this.capital = capital;
 		this.dataDissolução = dataDissolução;
 		this.dataInstituição = dataInstituição;
+		
 	}
 	
+	int j = 0;
+	public void addSistemas(Sistema s) {
+		sistemas[j++] = s;
+	}
 	
 	public String getDataDissolução() {
 		return dataDissolução;
@@ -22,13 +28,6 @@ public class RegimePolítico {
 		this.dataDissolução = dataDissolução;
 	}
 	
-	
-	private int i = 0;
-	public void adicionarPlaneta(Planeta p) {
-		if(i >= planetas.length)
-			return;
-		planetas[i++] = p;
-	}
 
 	public String getDataInstituição() {
 		return dataInstituição;
@@ -51,6 +50,8 @@ public class RegimePolítico {
 		System.out.println("Regime Político: " + nome);
 		System.out.println("Capital: " + capital);
 		System.out.println("Planetas: ");
+		for (int k = 0; k < j; k++)
+			sistemas[k].imprime();
 		System.out.println("Data de Instituição: " + dataInstituição);
 		System.out.println("Data de Dissolução: "+ dataDissolução);
 		
