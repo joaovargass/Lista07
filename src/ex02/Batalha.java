@@ -31,6 +31,16 @@ public class Batalha {
 					System.out.println(mestre.habilidades[M]);
 					System.out.println("Porém... " + lord.habilidades[L]);
 				}
+				if (lord.tipoDeHabilidade[L] == 'f' && mestre.tipoDeHabilidade[M] == 's') {
+					mestre.setVida(mestre.getVida() - lord.forçaDoAtaque[L]);
+					System.out.println(lord.habilidades[L]);
+					if (mestre.getVida() <= 0)
+						break;
+					else {
+						lord.setVida(lord.getVida() - mestre.forçaDoAtaque[M]);
+						System.out.println(mestre.habilidades[M]);
+					}
+				}
 			}
 		
 			if (lord.prioridade[L] < mestre.prioridade[M]) {
@@ -43,13 +53,54 @@ public class Batalha {
 					System.out.println(lord.habilidades[L]);
 					System.out.println("Porém... " + mestre.habilidades[M]);
 				}
+				if (lord.tipoDeHabilidade[L] == 's' && mestre.tipoDeHabilidade[M] == 'f') {
+					lord.setVida(lord.getVida() - mestre.forçaDoAtaque[M]);
+					System.out.println(mestre.habilidades[M]);
+					if (lord.getVida() <= 0)
+						break;
+					else {
+						mestre.setVida(mestre.getVida() - lord.forçaDoAtaque[L]);
+						System.out.println(lord.habilidades[L]);
+					}
+					
+				}
+			}
+			if (lord.prioridade[L] == mestre.prioridade[M]) {
+				if (lord.tipoDeHabilidade[L] == 'e') {
+					System.out.println("Os dois se esquivaram!");
+				}
+				if (lord.tipoDeHabilidade[L] == 'f' || lord.tipoDeHabilidade[L] == 's') {
+					if (aleatorio.nextInt(2) == 1) {
+						lord.setVida(lord.getVida() - mestre.forçaDoAtaque[M]);
+						System.out.println(mestre.habilidades[M]);
+						if (lord.getVida() <= 0)
+							break;
+						else {
+							mestre.setVida(mestre.getVida() - lord.forçaDoAtaque[L]);
+							System.out.println(lord.habilidades[L]);
+						}
+					}
+					else {
+						mestre.setVida(mestre.getVida() - lord.forçaDoAtaque[L]);
+						System.out.println(lord.habilidades[L]);
+						if (mestre.getVida() <= 0)
+							break;
+						else {
+							lord.setVida(lord.getVida() - mestre.forçaDoAtaque[M]);
+							System.out.println(mestre.habilidades[M]);
+						}
+					}
+						
+				}
+				
+				
 			}
 			System.out.println("Vida do Lord Sith: " + lord.getVida() + " || Vida do Mestre Jedi: " + mestre.getVida());
 		}
 		if (lord.getVida() <= 0)
-			System.out.println("Mestre Jedi ganhou a batalha!");
+			System.out.println("Mestre " + mestre.getNome() + " ganhou a batalha!");
 		else
-			System.out.println("Lord Sith ganhou a batalha!");
+			System.out.println("Lorde " + lord.getNome() + " ganhou a batalha!");
 	}
 
 	public LordSith getLord() {
