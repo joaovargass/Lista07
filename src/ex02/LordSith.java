@@ -5,7 +5,10 @@ public class LordSith {
 	private int vida;
 	private int domínioDaForça;
 	private int domínioDoSabre;
-	private Habilidades habilidade;
+	public String[] habilidades = new String[5];
+	public int[] forçaDoAtaque = new int[5];
+	public int[] prioridade = new int[5];
+	public char[] tipoDeHabilidade = new char[5];
 
 	
 	
@@ -14,21 +17,26 @@ public class LordSith {
 		this.domínioDoSabre = domínioDoSabre;
 		this.nome = nome;
 		this.vida = vida;
-		habilidade.habilidades[0] = "Lorde atacou com sabre";
-		habilidade.habilidades[1] = "Lorde atacou Forte com sabre";
-		habilidade.habilidades[2] = "Lorde atacou com a Força";
-		habilidade.habilidades[3] = "Lorde atacou Forte com a Força";
-		habilidade.habilidades[4] = "Lorde se esquivou";
-		habilidade.forçaDoAtaque[0] = 5;
-		habilidade.forçaDoAtaque[1] = 10;
-		habilidade.forçaDoAtaque[2] = 1;
-		habilidade.forçaDoAtaque[3] = 4;
-		habilidade.forçaDoAtaque[4] = 0;
-		habilidade.prioridade[0] = 1;
-		habilidade.prioridade[1] = 1;
-		habilidade.prioridade[2] = 2;
-		habilidade.prioridade[3] = 2;
-		habilidade.prioridade[4] = 3;
+		habilidades[0] = "Lord Sith atacou com sabre";
+		habilidades[1] = "Lord Sith atacou Forte com sabre";
+		habilidades[2] = "Lord Sith atacou com a Força";
+		habilidades[3] = "Lord Sith atacou Forte com a Força";
+		habilidades[4] = "Lord Sith se esquivou";
+		forçaDoAtaque[0] = 5;
+		forçaDoAtaque[1] = 10;
+		forçaDoAtaque[2] = 1;
+		forçaDoAtaque[3] = 4;
+		forçaDoAtaque[4] = 0;
+		prioridade[0] = 1;
+		prioridade[1] = 1;
+		prioridade[2] = 2;
+		prioridade[3] = 2;
+		prioridade[4] = 3;
+		tipoDeHabilidade[0] = 's';
+		tipoDeHabilidade[1] = 's';
+		tipoDeHabilidade[2] = 'f';
+		tipoDeHabilidade[3] = 'f';
+		tipoDeHabilidade[4] = 'e';
 		
 	}
 
