@@ -7,16 +7,6 @@ public abstract class Ser {
 	private String nascimento;
 	private String planetaNatal;
 	
-	public Ser (String sexo, String nome, String espécie, String nascimento, String planetaNatal) {
-		this.nome = nome;
-		this.sexo = sexo;
-		this.espécie = espécie;
-		this.nascimento = nascimento;
-		this.planetaNatal = planetaNatal;
-	}
-	
-
-	
 	public String getSexo() {
 		return sexo;
 	}

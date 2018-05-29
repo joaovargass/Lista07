@@ -6,22 +6,8 @@ public class RegimePolítico {
 	private Sistema[] sistemas = new Sistema[10];
 	private String dataInstituição;
 	private String dataDissolução;
-	private ChefeDeEstado chefe;
+	private String chefeDeEstado;
 
-	
-	public RegimePolítico(String nome, String capital, String dataInstituição, String dataDissolução, ChefeDeEstado chefe) {
-		this.nome = nome;
-		this.chefe = chefe;
-		this.capital = capital;
-		this.dataDissolução = dataDissolução;
-		this.dataInstituição = dataInstituição;
-		
-	}
-	
-	int j = 0;
-	public void addSistemas(Sistema s) {
-		sistemas[j++] = s;
-	}
 	
 	public String getDataDissolução() {
 		return dataDissolução;
@@ -47,20 +33,6 @@ public class RegimePolítico {
 	public void setCapital(String capital) {
 		this.capital = capital;
 	}
-	
-	public void imprime () {
-		System.out.println("Regime Político: " + nome);
-		System.out.println("Capital: " + capital);
-		System.out.println("Chefe: ");
-		chefe.imprime();
-		System.out.println("Planetas: ");
-		for (int k = 0; k < j; k++)
-			sistemas[k].imprime();
-		System.out.println("Data de Instituição: " + dataInstituição);
-		System.out.println("Data de Dissolução: "+ dataDissolução);
-		
-		
-	}
 
 
 	public String getNome() {
@@ -71,12 +43,19 @@ public class RegimePolítico {
 	public void setNome(String nome) {
 		this.nome = nome;
 	}
-
-	public ChefeDeEstado getChefe() {
-		return chefe;
+	public Sistema[] getSistemas() {
+		return sistemas;
+	}
+	public void setSistemas(Sistema[] sistemas) {
+		this.sistemas = sistemas;
+	}
+	public String getChefeDeEstado() {
+		return chefeDeEstado;
+	}
+	public void setChefeDeEstado(String chefeDeEstado) {
+		this.chefeDeEstado = chefeDeEstado;
 	}
 
-	public void setChefe(ChefeDeEstado chefe) {
-		this.chefe = chefe;
-	}
+
+
 }
