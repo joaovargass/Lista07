@@ -4,7 +4,7 @@ public class ClãJedi {
 	private String nome;
 	private String dataDeFundação;
 	private String dataDeExtinção;
-	private Jedi treinador;
+	private Mestre treinador;
 	
 	public String getNome() {
 		return nome;
@@ -27,7 +27,7 @@ public class ClãJedi {
 	public Jedi getTreinador() {
 		return treinador;
 	}
-	public void setTreinador(Jedi treinador) {
+	public void setTreinador(Mestre treinador) {
 		this.treinador = treinador;
 	}
 	

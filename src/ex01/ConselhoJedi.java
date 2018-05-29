@@ -2,7 +2,7 @@ package ex01;
 
 public class ConselhoJedi {
 	private String nome;
-	private Jedi[] administradores = new Jedi[10];
+	private Jedi[] administradores;
 	private Academia academia;
 	
 	public Jedi[] getAdministradores() {

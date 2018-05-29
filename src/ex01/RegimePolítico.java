@@ -3,7 +3,7 @@ package ex01;
 public class RegimePolítico {
 	private String nome;
 	private String capital;
-	private Sistema[] sistemas = new Sistema[10];
+	private Sistema[] sistemas;
 	private String dataInstituição;
 	private String dataDissolução;
 	private String chefeDeEstado;

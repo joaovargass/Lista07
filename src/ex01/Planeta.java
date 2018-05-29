@@ -6,12 +6,6 @@ public abstract class Planeta {
 	private String cor;
 	private int diâmetro;
 	
-	public Planeta (String nome, String c, int d) {
-		this.nome = nome;
-		cor = c;
-		diâmetro = d;
-	}
-	
 	public String getCor() {
 		return cor;
 	}

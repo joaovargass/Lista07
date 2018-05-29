@@ -1,14 +1,10 @@
 package ex01;
 
 public class Jedi extends Ser {
-	private String treinador;
 	private int percentualPazInterna;
 	private String poderes;
 	
-	
-	public Jedi(String sexo, String nome, String espécie, String nascimento, String planetaNatal) {
-		super(sexo, nome, espécie, nascimento, planetaNatal);
-	}
+
 
 	public int getPercentualPazInterna() {
 		return percentualPazInterna;
@@ -29,14 +25,5 @@ public class Jedi extends Ser {
 		this.poderes = poderes;
 	}
 
-
-	public String getTreinador() {
-		return treinador;
-	}
-
-
-	public void setTreinador(String treinador) {
-		this.treinador = treinador;
-	}
 	
 }

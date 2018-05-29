@@ -3,7 +3,7 @@ package ex01;
 public class ConselhoSith {
 	private String nome;
 	private Academia academia;
-	private Sith[] administradores = new Sith[10];
+	private Sith[] administradores;
 	
 	public String getNome() {
 		return nome;
