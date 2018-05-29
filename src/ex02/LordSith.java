@@ -5,13 +5,33 @@ public class LordSith {
 	private int vida;
 	private int domínioDaForça;
 	private int domínioDoSabre;
+	private Habilidades habilidade;
+
+	
 	
 	public LordSith (String nome, int vida, int domínioDaForça, int domínioDoSabre) {
 		this.domínioDaForça = domínioDaForça;
 		this.domínioDoSabre = domínioDoSabre;
 		this.nome = nome;
 		this.vida = vida;
+		habilidade.habilidades[0] = "Lorde atacou com sabre";
+		habilidade.habilidades[1] = "Lorde atacou Forte com sabre";
+		habilidade.habilidades[2] = "Lorde atacou com a Força";
+		habilidade.habilidades[3] = "Lorde atacou Forte com a Força";
+		habilidade.habilidades[4] = "Lorde se esquivou";
+		habilidade.forçaDoAtaque[0] = 5;
+		habilidade.forçaDoAtaque[1] = 10;
+		habilidade.forçaDoAtaque[2] = 1;
+		habilidade.forçaDoAtaque[3] = 4;
+		habilidade.forçaDoAtaque[4] = 0;
+		habilidade.prioridade[0] = 1;
+		habilidade.prioridade[1] = 1;
+		habilidade.prioridade[2] = 2;
+		habilidade.prioridade[3] = 2;
+		habilidade.prioridade[4] = 3;
+		
 	}
+
 	
 	
 	public String getNome() {
@@ -46,39 +66,5 @@ public class LordSith {
 		this.domínioDoSabre = domínioDoSabre;
 	}
 
-	public int atacarComSabre (int numero) {
-		if (numero == 0)
-			return 5;
-		else
-			return -1;
-	}
-	
-	public int atacarForteComSabre (int numero) {
-		if (numero == 1)
-			return 10;
-		else
-			return -1;
-	}
-	
-	public int atacarComForça (int numero) {
-		if (numero == 2)
-			return 2;
-		else
-			return -1;
-	}
-	
-	public int atacarForteComForça (int numero) {
-		if (numero == 3)
-			return 4;
-		else
-			return -1;
-	}
-	
-	public int esquivar (int numero) {
-		if (numero == 4)
-			return 0;
-		else
-			return -1;
-	}
 	
 }

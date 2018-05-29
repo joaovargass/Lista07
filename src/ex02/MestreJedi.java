@@ -5,13 +5,30 @@ public class MestreJedi {
 	private int vida;
 	private int domínioDaForça;
 	private int domínioDoSabre;
+	private Habilidades habilidade;
 	
 	public MestreJedi (String nome, int vida, int domínioDaForça, int domínioDoSabre) {
 		this.domínioDaForça = domínioDaForça;
 		this.domínioDoSabre = domínioDoSabre;
 		this.nome = nome;
 		this.vida = vida;
+		habilidade.habilidades[0] = "Jedi atacou com sabre";
+		habilidade.habilidades[1] = "Jedi atacou Forte com sabre";
+		habilidade.habilidades[2] = "Jedi atacou com a Força";
+		habilidade.habilidades[3] = "Jedi atacou Forte com a Força";
+		habilidade.habilidades[4] = "Jedi se esquivou";
+		habilidade.forçaDoAtaque[0] = 6;
+		habilidade.forçaDoAtaque[1] = 9;
+		habilidade.forçaDoAtaque[2] = 2;
+		habilidade.forçaDoAtaque[3] = 3;
+		habilidade.forçaDoAtaque[4] = 0;
+		habilidade.prioridade[0] = 1;
+		habilidade.prioridade[1] = 1;
+		habilidade.prioridade[2] = 2;
+		habilidade.prioridade[3] = 2;
+		habilidade.prioridade[4] = 3;
 	}
+	
 	
 	
 	public String getNome() {
@@ -46,38 +63,5 @@ public class MestreJedi {
 		this.domínioDoSabre = domínioDoSabre;
 	}
 
-	public int atacarComSabre (int numero) {
-		if (numero == 0)
-			return 7;
-		else
-			return -1;
-	}
 	
-	public int atacarForteComSabre (int numero) {
-		if (numero == 1)
-			return 9;
-		else
-			return -1;
-	}
-	
-	public int atacarComForça (int numero) {
-		if (numero == 2)
-			return 1;
-		else
-			return -1;
-	}
-	
-	public int atacarForteComForça (int numero) {
-		if (numero == 3)
-			return 3;
-		else
-			return -1;
-	}
-	
-	public int esquivar (int numero) {
-		if (numero == 4)
-			return 0;
-		else
-			return -1;
-	}
 }
